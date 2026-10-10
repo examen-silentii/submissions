@@ -1,0 +1,110 @@
+name: Submit an examination
+description: Submit an independent examination of scientific software or public research data to Examen Silentii (ExSil).
+title: "[Submission]: "
+labels: ["submission"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for submitting to **Examen Silentii (ExSil)**. Please read the [submission requirements](https://examen-silentii.github.io/submit/) and [policies](https://examen-silentii.github.io/policies/) before completing this form. Review takes place openly in this issue.
+  - type: input
+    id: article-title
+    attributes:
+      label: Article title
+    validations:
+      required: true
+  - type: textarea
+    id: authors
+    attributes:
+      label: Authors
+      description: Name, affiliation (if any) and ORCID for each author. Mark the corresponding author.
+    validations:
+      required: true
+  - type: textarea
+    id: subject
+    attributes:
+      label: What was examined
+      description: Name of the software or dataset, the exact version or release tested, and where it was obtained.
+    validations:
+      required: true
+  - type: textarea
+    id: significance
+    attributes:
+      label: Why it matters
+      description: How widely the software or dataset is used, or where an error in it would have consequences.
+    validations:
+      required: true
+  - type: input
+    id: manuscript
+    attributes:
+      label: Link to the manuscript
+      description: A public link to the manuscript (PDF or Markdown).
+    validations:
+      required: true
+  - type: input
+    id: materials
+    attributes:
+      label: Link to the archived test materials
+      description: A public repository or archive (for example, on Zenodo) containing the code, data and instructions needed to rerun the test.
+    validations:
+      required: true
+  - type: textarea
+    id: reference
+    attributes:
+      label: Independent reference
+      description: What the results were compared against, and why it is independent of what was tested. Declare any shared code, methods or ancestry.
+    validations:
+      required: true
+  - type: textarea
+    id: findings
+    attributes:
+      label: Summary of findings
+      description: What is wrong, how large the error is, and whether the software or dataset signalled the problem.
+    validations:
+      required: true
+  - type: textarea
+    id: notification
+    attributes:
+      label: Notification of maintainers
+      description: When and where the issue was reported to the maintainers (with a link, such as to an issue tracker), and their response.
+    validations:
+      required: true
+  - type: dropdown
+    id: response-status
+    attributes:
+      label: Maintainers' response
+      options:
+        - The maintainers responded
+        - No response after a reasonable time
+        - The project is no longer maintained
+    validations:
+      required: true
+  - type: textarea
+    id: conflicts
+    attributes:
+      label: Conflicts of interest
+      description: Any relationship between the authors and the software, data or people involved. Write "None" if there are none.
+    validations:
+      required: true
+  - type: textarea
+    id: ai-use
+    attributes:
+      label: Use of AI tools
+      description: Describe any use of AI tools in preparing the submission. Write "None" if none were used.
+    validations:
+      required: true
+  - type: checkboxes
+    id: confirmations
+    attributes:
+      label: Confirmations
+      options:
+        - label: The submission meets the requirements on the Submit page.
+          required: true
+        - label: The maintainers were notified before submission, or the submission explains why this was not possible.
+          required: true
+        - label: Where the problem could be a security vulnerability, the project's security policy has been followed.
+          required: true
+        - label: The authors agree to open review in this issue.
+          required: true
+        - label: The authors agree to publication under the CC BY 4.0 licence.
+          required: true
