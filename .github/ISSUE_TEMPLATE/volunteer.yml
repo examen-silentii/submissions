@@ -1,0 +1,37 @@
+name: Volunteer to review or edit
+description: Offer to review submissions or to join the editorial board.
+title: "[Volunteer]: "
+labels: ["volunteer"]
+body:
+  - type: input
+    id: name
+    attributes:
+      label: Name
+    validations:
+      required: true
+  - type: input
+    id: orcid
+    attributes:
+      label: ORCID (if any)
+  - type: dropdown
+    id: role
+    attributes:
+      label: Role
+      options:
+        - Reviewer
+        - Editorial board member
+        - Either
+    validations:
+      required: true
+  - type: textarea
+    id: expertise
+    attributes:
+      label: Areas of expertise
+      description: Fields, kinds of software or data, and programming languages you could judge with confidence.
+    validations:
+      required: true
+  - type: textarea
+    id: experience
+    attributes:
+      label: Relevant experience
+      description: For example, previous reviewing, maintaining scientific software, or finding and reporting errors in tools or data. Links are welcome.

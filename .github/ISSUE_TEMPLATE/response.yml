@@ -1,0 +1,46 @@
+name: Submit a maintainer response
+description: Respond, as a maintainer, to an examination of your software or data.
+title: "[Response]: "
+labels: ["response"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        This form is for maintainers of software or data examined in an ExSil submission or article. See the [guide for maintainers](https://examen-silentii.github.io/maintainers/).
+  - type: input
+    id: examination
+    attributes:
+      label: Examination you are responding to
+      description: Link to the submission issue or the published article.
+    validations:
+      required: true
+  - type: textarea
+    id: responders
+    attributes:
+      label: Responding maintainers
+      description: Name, role in the project and ORCID (if any) for each person responding.
+    validations:
+      required: true
+  - type: input
+    id: response-text
+    attributes:
+      label: Link to the response
+      description: A public link to your response (PDF or Markdown). The article template may be used but is not required.
+    validations:
+      required: true
+  - type: textarea
+    id: summary
+    attributes:
+      label: Summary
+      description: Do you agree with the findings? Has the problem been fixed, or will it be? Is anything in the examination factually wrong?
+    validations:
+      required: true
+  - type: checkboxes
+    id: confirmations
+    attributes:
+      label: Confirmations
+      options:
+        - label: I am a maintainer of the examined software or data, or am responding on the project's behalf.
+          required: true
+        - label: I agree to publication of the response under the CC BY 4.0 licence.
+          required: true
